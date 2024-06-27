@@ -4,13 +4,7 @@ app=Flask(__name__)
 
 @app.route('/')
 def hello():
-    return 'Hello this is home'
-
-@app.route('/home')
-def home():
-    return "Hello welcome Home..!!"
-
-# Dynamic url
+    return 'Hello welcome root..!!'
 
 @app.route('/success/<int:marks>')
 def pas(marks):
@@ -19,6 +13,8 @@ def pas(marks):
 @app.route('/fail/<int:marks>')
 def fail(marks):
     return 'The guy is failed at marks '+ str(marks)
+
+#Dynamic url
 
 @app.route('/result/<int:marks>')
 def result(marks):
